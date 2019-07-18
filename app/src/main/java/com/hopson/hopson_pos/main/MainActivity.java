@@ -30,6 +30,9 @@ public class MainActivity extends BaseActivity<MainContract.View, MainPresenter>
 
     @Override
     public void initViews() {
+        titleBar.setLeftVisible(false);
+
+
         Button btnJump = findViewById(R.id.btn_jump);
 
         if(queryAllList().size() !=0){

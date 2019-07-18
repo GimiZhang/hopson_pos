@@ -46,7 +46,7 @@ public abstract class BaseActivity<V, P extends BasePresenter<V>> extends AppCom
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View contentView = getInflateView();
-        UiUtil.setStatusBarColor(this, R.color._ffffff);
+        UiUtil.setStatusBarColor(this, R.color.colorAccent);
         setContentView(R.layout.common_activity_base_layout);
         frameLayout = (FrameLayout) findViewById(R.id.fl_layout);
         progressBar = (ProgressBar) findViewById(R.id.progress);
@@ -61,8 +61,8 @@ public abstract class BaseActivity<V, P extends BasePresenter<V>> extends AppCom
         frameLayout.addView(contentView);
         maskView.setOnClickListener(null);
         titleBar.setLeftImageResource(R.mipmap.back_black);
-        titleBar.setBackgroundColor(getResources().getColor(R.color._f8f8f8));
-        titleBar.setTitleColor(getResources().getColor(R.color._444345));
+        titleBar.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        titleBar.setTitleColor(getResources().getColor(R.color._ffffff));
         if (null == mPresenter) {
             mPresenter = createPresenter();
         }
