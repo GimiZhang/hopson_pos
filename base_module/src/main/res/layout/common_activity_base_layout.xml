@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.hopson.base_module.utils.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_base_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/_ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_base_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/empty_icon" />
+
+        <TextView
+            android:id="@+id/tv_base_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="暂无内容"
+            android:textColor="#a1a1a2"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <View
+            android:id="@+id/view_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.1"
+            android:background="@color/_000000"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rel_retry_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/_f8f8f8"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/bt_retry_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/retry_error_bt_bg"
+                android:paddingBottom="@dimen/dp_8"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_8"
+                android:text="重新加载"
+                android:textColor="@color/_ffffff"
+                android:textSize="@dimen/dp_14" />
+
+            <TextView
+                android:id="@+id/tv_desc_retry_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bt_retry_error"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_32"
+                android:gravity="center"
+                android:text="请检查您的网络\n重新加载吧"
+                android:textColor="@color/_868686"
+                android:textSize="@dimen/dp_14" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_desc_retry_error"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:src="@mipmap/retry_error" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/ivBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
